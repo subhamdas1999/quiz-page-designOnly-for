@@ -1,0 +1,421 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Quiz WEBSITE</title>
+<link href="css/bootstrap.min.css" type="text/css" rel="stylesheet">
+<link href="css/bootstrap.css" type="text/css" rel="stylesheet">
+<link href="fontawesome/css/all.css" rel="stylesheet">
+<script src="js/bootstrap.bundle.js"></script>
+<script src="js/bootstrap.bundle.min.js"></script>
+<script src="js/jquery.min.js"></script>
+<script src="js/popper.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<style>
+.footer {
+   /* position: fixed; */
+   left: 0;
+   bottom: 0;
+   width: 100%;
+   height: auto;
+   
+   color: white;
+   text-align: center;
+}
+body
+{
+
+/*background-color: #F1F3F6;
+
+ background:url("images/body_bg.jpg") left top repeat-x;*/  
+
+}
+/*body{
+ background: linear-gradient(to left, rgba(245, 245, 245, 0.5), rgba(154, 193, 208, 0.5));
+}
+*/
+.design-rounded-input {
+border-radius: 50%;         /* 1rem=16px ,It stands for “Root em”. It is a relative unit of CSS and translated by the browser to pixels (px)*/
+width: 50px;
+height:50px;
+}
+.submit-rounded {
+border-radius: 1rem;
+}
+.box{
+height: 300px;
+width: 900px;
+border: 2px solid grey;
+background-color: #F1F3F6;
+}
+.very-small-btn{
+width: 10px;
+height:10px;
+border-radius: 50%;
+}
+</style>
+</head>
+<body>
+<!-- menu bar start --------------->
+<nav class="navbar navbar-expand-md bg-primary navbar-dark ">
+	<a class="navbar-brand ps-5" href="#">LOGO</a>
+  <a class="navbar-brand" href="#">TCS <B>NextStep</B></a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="collapsibleNavbar">
+    <ul class="nav navbar-nav flex-fill justify-content-start">  <!--got it from stackoverflow-->
+      <li class="navbar-nav">  
+        <a class="nav-link text-white" href="#">Alert</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link text-white" href="#">Campus commune</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link text-white" href="#">TCS Buzz</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link text-white" href="#">Help & Support</a>
+      </li>
+		<li class="nav-item">
+       	 <a class="nav-link text-white" href="login.html">login</a>
+     	 </li>
+
+		<li class="nav-item">
+        <a class="nav-link text-white" href="#"></a>
+      </li>
+
+
+    </ul>
+
+
+<ul class="nav navbar-nav flex-fill w-50 justify-content-end pe-5" >  <!--got it from stackoverflow-->
+            <li class="nav-item pe-3 pt-2">
+                <form class="d-flex">
+        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+        <button class="btn btn-outline-success bg-danger text-white" type="submit">Search</button>
+      </form>
+            </li>
+            <li class="nav-item pe-3 pt-2">
+
+
+<!--NAVBAR notification start -->
+                  <i class="fas fa-bell fa-2x align-middle" style="color: white;" data-toggle="modal" data-target="#subhammyModal1"></i>
+
+                    <div class="modal fade" id="subhammyModal1">
+                  <div class="modal-dialog">
+                    <div class="modal-content">
+                    
+                      <!-- Modal Header -->
+                      <div class="modal-header">
+                        <h4 class="modal-title">ALL NOTIFICATIONS</h4>
+                        <button type="button" class="close" data-dismiss="modal">&times;</button>
+                      </div>
+                      <!-- Modal body -->
+                      <div class="modal-body">
+                        1st msg......<br>
+                        2nd msg...<br>
+                        1st msg......<br>
+                        2nd msg...<br>
+                      </div>
+                      <!-- Modal footer -->
+                      <div class="modal-footer">
+                        <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+                      </div>                      
+                    </div>
+                  </div>
+                </div>
+            </li>
+<!-- NAVBAR notification ends -->
+<!--NAVBAR messages starts -->
+            <li class="nav-item pe-2 pt-2"><i class="fas fa-envelope fa-2x align-middle" style="color: white;" data-toggle="modal" data-target="#subhammyModal2"></i>
+                <div class="modal fade" id="subhammyModal2">
+                  <div class="modal-dialog">
+                    <div class="modal-content">
+                      <!-- Modal Header -->
+                      <div class="modal-header">
+                        <h4 class="modal-title">ALL MESSAGES</h4>
+                        <button type="button" class="close" data-dismiss="modal">&times;</button>
+                      </div>
+                      <!-- Modal body -->
+                      <div class="modal-body">
+                        1st msg......<br>
+                        2nd msg...<br>
+                        1st msg......<br>
+                        2nd msg...<br>
+                      </div>
+                      <!-- Modal footer -->
+                      <div class="modal-footer">
+                        <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+                      </div>
+                    </div>
+                  </div>
+                </div>    
+            </li>
+<!--NAVBAR messages ENDS -->
+<!--NAVBAR My Profile START -->
+            <li class="nav-item pe-5">
+  <div class="dropdown">
+          <button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown">
+            <i class="fas fa-user fa-2x"></i>
+          </button>
+              <div class="dropdown-menu">
+                <a class="dropdown-item" href="#">My Profile</a>
+                <a class="dropdown-item" href="#">Link 2</a>
+                <a class="dropdown-item" href="#">Link 3</a>
+              </div>
+            </div>
+  </li>
+<!--NAVBAR My Profile ENDS -->
+        </ul>
+  </div> 
+</nav>
+<!-------------- menu bar End --------------->
+<!--content start -->
+<div class="container-fluid">
+<div class="row">
+<!--left gray portion -->
+<div class="col-sm-2 bg-light"><br>  
+<div class="row"><h4 class="text-left">Instructions</h4></div><br>
+<div class="row" style="height: 250px;" ><p>
+1. Lorem Ipsum is simply dummy text of the printing and typesetting industry.<br><br>
+2. Lorem Ipsum is simply dummy text of the printing and typesetting industry.<br><br>
+3. Lorem Ipsum is simply dummy text of the printing and typesetting industry.<br><br>
+</p>
+</div>
+<br>
+<div class="row"><h4 class="text-left">Questions</h4></div><br>
+<!-- round question symbol start -->
+<div class="row">
+<!-- 1st column 1 , 4 ,7 ,10 ,13 START-->
+  <div class="col-sm-4 text-center">
+    
+<button type="button" class="btn design-rounded-input bg-success text-white">1</button><br><br>
+<button type="button" class="btn design-rounded-input bg-success text-white">4</button><br><br>
+<button type="button" class="btn design-rounded-input bg-success text-white">7</button><br><br>
+<button type="button" class="btn design-rounded-input bg-secondary text-white">10</button><br><br>
+<button type="button" class="btn design-rounded-input bg-secondary text-white">13</button><br><br>
+
+  </div>
+<!-- 1st column 1 , 4 ,7 ,10 ,13 END-->
+<!-- 2nd column 2 , 5 ,8 ,11 ,14 START-->
+<div class="col-sm-4 text-center">
+<button type="button" class="btn design-rounded-input bg-success text-white">2</button><br><br>
+<button type="button" class="btn design-rounded-input bg-success text-white">5</button><br><br>
+<button type="button" class="btn design-rounded-input bg-warning text-white">8</button><br><br>
+<button type="button" class="btn design-rounded-input bg-secondary text-white">11</button><br><br>
+<button type="button" class="btn design-rounded-input bg-secondary text-white">14</button><br><br>  
+
+</div>
+<!-- 2nd column 2 , 5 ,8 ,11 ,14 END-->
+<!-- 3nd column 3 , 6 ,9 ,12 ,15 START-->
+<div class="col-sm-4 text-center">
+<button type="button" class="btn design-rounded-input bg-success text-white">3</button><br><br>
+<button type="button" class="btn design-rounded-input bg-danger text-white">6</button><br><br>
+<button type="button" class="btn design-rounded-input bg-success text-white">9</button><br><br>
+<button type="button" class="btn design-rounded-input bg-secondary text-white">12</button><br><br>
+<button type="button" class="btn design-rounded-input bg-secondary text-white">15</button><br><br>  
+</div>
+</div>
+<!-- 3nd column 3 , 6 ,9 ,12 ,15 End-->
+<!-- round question symbol end -->
+<!-- MINI question instruction start -->
+<div class="col-sm">
+<div class="row">
+<div>
+  <small>Not answered</small>&nbsp;&nbsp;&nbsp;
+  <i class="fas fa-circle" style="color: gray;"></i>
+</div>
+</div>
+<div class="row">
+  <div>
+  <small>Answered</small>&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+  <i class="fas fa-circle" style="color: green"></i>
+</div>
+</div>
+<div class="row">
+  <div>
+  <small>Incomplete</small>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+  <i class="fas fa-circle" style="color: red"></i>
+</div>
+</div>
+<div class="row"><div><small>Mark for review</small>
+
+<i class="fas fa-circle" style="color: yellow"></i>
+</div></div>
+</div>
+<!-- MINI question instruction End -->
+</div>
+<!--left gray portion -->
+<!--Right white portion -->
+<div class="col-sm-10">
+<div class="row">
+<div class="container">
+  
+  <br>
+  <!-- Nav pills -->
+  
+  <ul class="nav nav-pills" role="tablist">
+    <li class="nav-item">
+      <a class="nav-link active" data-toggle="pill" href="#home">General Knowledge</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" data-toggle="pill" href="#menu1">Indian Geography</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" data-toggle="pill" href="#menu2">History & Awards</a>
+    </li>
+  </ul>
+<!-- Tab panes -->
+  <div class="tab-content">
+<!-- 1st Toggleable Pills START-->
+    <div id="home" class="container tab-pane active"><br>
+<div class="container" style="padding-right: 160px;" >
+<div class="box overflow-auto mx-auto" id="#TextBox1">  
+
+
+  <script type="text/javascript">
+$(document).ready(function() {
+ $('#TextBox1').bind('copy paste cut',function(e) { 
+ e.preventDefault(); //disable cut,copy,paste
+ alert('cut,copy & paste options are disabled !!');
+ });
+});
+</script>
+ <asp:TextBox ID="TextBox1" runat="server" >
+
+
+  <p style="text-align: left; padding-left: 20px; padding-top: 20px;">Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letrase. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letrase. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen boo galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letrase</p><br>
+     </div>
+</div>
+<br>
+<div class="container" style="padding-left: 80px;">
+ 
+  <form>
+    <div class="radio">
+      <label><input type="radio" name="optradio" checked>&nbsp; &nbsp; This is the Option 1</label>
+    </div>
+
+    <br>
+
+    <div class="radio">
+      <label><input type="radio" name="optradio">&nbsp; &nbsp;This is the Option 2</label>
+    </div>
+
+    <br>
+
+    <div class="radio">
+      <label><input type="radio" name="optradio">&nbsp; &nbsp;This is the Option 3</label>
+    </div>
+
+    <br>
+
+    <div class="radio">
+      <label><input type="radio" name="optradio">&nbsp; &nbsp;This is the Option 3</label>
+    </div>
+
+  </form>
+</div>
+</div>
+<!-- 1st Toggleable Pills END-->
+
+<!-- 2nd Toggleable Pills START-->
+
+     <div id="menu1" class="container tab-pane "><br>
+     
+<div class="container" style="padding-right: 160px;">
+
+<div class="box overflow-auto mx-auto " id="#TextBox2"> 
+  <p style="text-align: left; padding-left: 20px; padding-top: 20px;">
+
+
+<script type="text/javascript">
+$(document).ready(function() {
+ $('#TextBox2').bind('copy paste cut',function(e) { 
+ e.preventDefault(); //disable cut,copy,paste
+ alert('cut,copy & paste options are disabled !!');
+ });
+});
+</script>
+ <asp:TextBox ID="TextBox2" runat="server" >
+
+
+
+
+
+    
+
+Q1) explain the image<br><br>
+
+<img src="images/puzzle1.jpg" height="150px" width="150px">
+
+
+</p><br>
+  </div>
+</div>
+<br>
+<div class="container" style="padding-left: 80px;">
+   <form>
+    <div class="radio">
+      <label><input type="radio" name="optradio" checked>&nbsp; &nbsp; THE ANS WILL BE &nbsp;<img src="images/puzzle2.jpg" height="100px" width="100px"></label>
+    </div>
+    <br>
+    <div class="radio">
+      <label><input type="radio" name="optradio">&nbsp; &nbsp;THE ANS WILL BE &nbsp;<img src="images/puzzle3.jpg" height="100px" width="100px"></label>
+    </div>
+    <br>
+    <div class="radio">
+      <label><input type="radio" name="optradio">&nbsp; &nbsp;THE ANS WILL BE &nbsp;<img src="images/puzzle4.jpg" height="100px" width="100px"></label>
+    </div>
+
+    <br>
+
+    <div class="radio">
+      <label><input type="radio" name="optradio">&nbsp; &nbsp;THE ANS WILL BE &nbsp;<img src="images/puzzle5.png" height="100px" width="100px"></label>
+    </div>
+  </form>
+</div>
+</div>
+<!-- 2nd Toggleable Pills END-->
+    <div id="menu2" class="container tab-pane fade"><br>
+      <h3>Menu 3</h3>
+      <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam.</p>
+    </div>
+  </div>
+</div>
+</div>
+<br>
+<div class="container">
+  <div class="float-start" style="padding-left: 80px;">
+<button type="button" class="btn btn-danger">Previous</button></div></div>
+
+<div class="float-end" style="padding-right: 120px;">
+<button type="button" class="btn btn-success">NEXT</button></div></div>
+</div>
+</div>
+<!--Right white portion -->
+
+</div>
+</div>
+<!--content end -->
+<!-- Footer -->
+<footer>
+<div class="container-fluid bg-primary text-white pt-3">
+	<div class="row">
+		<div class="col-sm-4">
+				<p class="text-start">2010 - 2013 Tata consultancy service limited</p>
+		</div>
+    <div class="col-sm-4">
+    <div class="text-center">
+    <a href="instruction.html" class="btn btn-info" role="button">prev</a>    
+    <a href="result.html" class="btn btn-info" role="button">next</a>
+    </div>
+  </div>
+<div class="col-sm-4">
+<p class="text-end">TCS is a member of the tata group</p>
+</div>
+</div>
+</div>
+</footer>
+</body>
+</html>

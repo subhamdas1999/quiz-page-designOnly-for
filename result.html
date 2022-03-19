@@ -1,0 +1,377 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Quiz WEBSITE</title>
+
+<link href="css/bootstrap.min.css" type="text/css" rel="stylesheet">
+<link href="css/bootstrap.css" type="text/css" rel="stylesheet">
+<link href="fontawesome/css/all.css" rel="stylesheet">
+
+
+
+<script src="js/bootstrap.bundle.js"></script>
+<script src="js/bootstrap.bundle.min.js"></script>
+<script src="js/jquery.min.js"></script>
+
+<script src="js/popper.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+
+<style>
+.footer {
+   /* position: fixed; */
+   left: 0;
+   bottom: 0;
+   width: 100%;
+   height: auto;
+   
+   color: white;
+   text-align: center;
+}
+
+
+body
+{
+
+/*background-color: #F1F3F6;
+
+ /*background:url("images/body_bg.jpg") left top repeat-x;*/  
+
+}
+
+
+
+/*body{
+ background: linear-gradient(to left, rgba(245, 245, 245, 0.5), rgba(154, 193, 208, 0.5));
+
+
+}
+
+*/
+.design-rounded-input {
+border-radius: 3rem;         /* 1rem=16px ,It stands for “Root em”. It is a relative unit of CSS and translated by the browser to pixels (px)*/
+background-color: #FFF3F3;
+
+
+}
+
+.submit-rounded {
+border-radius: 1rem;
+
+
+}
+
+
+.box{
+
+height: 400px;
+width: 900px;
+border: 2px solid grey;
+background-color: #FFFFFF;
+
+
+}
+
+
+
+</style>
+
+
+</head>
+
+<body>
+
+
+
+<!-- menu bar start --------------->
+
+
+<nav class="navbar navbar-expand-md bg-primary navbar-dark ">
+  <a class="navbar-brand ps-5" href="#">LOGO</a>
+  <a class="navbar-brand" href="#">TCS <B>NextStep</B></a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="collapsibleNavbar">
+    <ul class="nav navbar-nav flex-fill justify-content-start">  <!--got it from stackoverflow-->
+      <li class="navbar-nav">  
+        <a class="nav-link text-white" href="#">Alert</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link text-white" href="#">Campus commune</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link text-white" href="#">TCS Buzz</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link text-white" href="#">Help & Support</a>
+      </li>
+    <li class="nav-item">
+         <a class="nav-link text-white" href="login.html">login</a>
+       </li>
+
+    <li class="nav-item">
+        <a class="nav-link text-white" href="#"></a>
+      </li>
+
+
+    </ul>
+
+
+<ul class="nav navbar-nav flex-fill w-50 justify-content-end pe-5" >  <!--got it from stackoverflow-->
+            <li class="nav-item pe-3 pt-2">
+                <form class="d-flex">
+        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+        <button class="btn btn-outline-success bg-danger text-white" type="submit">Search</button>
+      </form>
+            </li>
+            <li class="nav-item pe-3 pt-2">
+
+
+<!--NAVBAR notification start -->
+                  <i class="fas fa-bell fa-2x align-middle" style="color: white;" data-toggle="modal" data-target="#subhammyModal1"></i>
+
+                    <div class="modal fade" id="subhammyModal1">
+                  <div class="modal-dialog">
+                    <div class="modal-content">
+                    
+                      <!-- Modal Header -->
+                      <div class="modal-header">
+                        <h4 class="modal-title">ALL NOTIFICATIONS</h4>
+                        <button type="button" class="close" data-dismiss="modal">&times;</button>
+                      </div>
+                      <!-- Modal body -->
+                      <div class="modal-body">
+                        1st msg......<br>
+                        2nd msg...<br>
+                        1st msg......<br>
+                        2nd msg...<br>
+                      </div>
+                      <!-- Modal footer -->
+                      <div class="modal-footer">
+                        <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+                      </div>                      
+                    </div>
+                  </div>
+                </div>
+            </li>
+<!-- NAVBAR notification ends -->
+<!--NAVBAR messages starts -->
+            <li class="nav-item pe-2 pt-2"><i class="fas fa-envelope fa-2x align-middle" style="color: white;" data-toggle="modal" data-target="#subhammyModal2"></i>
+                <div class="modal fade" id="subhammyModal2">
+                  <div class="modal-dialog">
+                    <div class="modal-content">
+                      <!-- Modal Header -->
+                      <div class="modal-header">
+                        <h4 class="modal-title">ALL MESSAGES</h4>
+                        <button type="button" class="close" data-dismiss="modal">&times;</button>
+                      </div>
+                      <!-- Modal body -->
+                      <div class="modal-body">
+                        1st msg......<br>
+                        2nd msg...<br>
+                        1st msg......<br>
+                        2nd msg...<br>
+                      </div>
+                      <!-- Modal footer -->
+                      <div class="modal-footer">
+                        <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+                      </div>
+                    </div>
+                  </div>
+                </div>    
+            </li>
+<!--NAVBAR messages ENDS -->
+<!--NAVBAR My Profile START -->
+            <li class="nav-item pe-5">
+            
+          <div class="dropdown">
+          <button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown">
+            <i class="fas fa-user fa-2x"></i>
+          </button>
+              <div class="dropdown-menu">
+                <a class="dropdown-item" href="#">My Profile</a>
+                <a class="dropdown-item" href="#">Link 2</a>
+                <a class="dropdown-item" href="#">Link 3</a>
+              </div>
+            </div>
+  </li>
+<!--NAVBAR My Profile ENDS -->
+        </ul>
+  </div> 
+</nav>
+
+
+<!-------------- menu bar End --------------->
+
+<div class="row">
+
+
+<!-- LEFT SIDE START-->
+
+<div class="col-sm-3" style="background-color:#F1F3F6; padding-top: 40px; padding-bottom: 70px;" >
+  <br>
+  
+<div class="container-fluid">
+
+<div class="card">
+    <div class="card-body">
+      <h4 class="card-title text-center">
+          
+        <button type="button" class="btn btn-info">SUBHAM</button>
+        <br>
+        <br>
+        <h3 style="text-align: center;"><u>RESULT</u></h3><br>
+
+
+      </h4>
+
+
+
+
+      <p class="card-text">
+        
+        TOTAL SCORE &nbsp;&nbsp;<button type="button" class="btn btn-warning">20/40</button><br><br><br>
+
+
+
+        TIME TAKEN &nbsp;&nbsp;&nbsp;&nbsp;<button type="button" class="btn btn-warning">20/40</button><br><br><br>
+
+
+
+
+        PERCENTILE&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<button type="button" class="btn btn-warning">20/40</button><br><br><br>
+
+
+      </p>
+
+     <!--<a href="#" class="btn btn-success" role="button">NEXT</a>-->
+      
+    </div>
+  </div>
+
+</div>
+
+<br>
+</div>
+
+<!-- LEFT SIDE ENDS-->
+
+
+<!-- RIGHT SIDE START-->
+
+<div class="col-sm-9" style="padding-top: 90px;">
+  
+<div class="container">
+
+<table class="table table-hover">
+  <thead>
+    <tr>
+      <th scope="col" class="table-warning">ATTEMPTS</th>
+      <th scope="col" class="table-warning">CATEGORY 1</th>
+      <th scope="col" class="table-warning">CATEGORY 2</th>
+      <th scope="col" class=" table-success">TOTAL</th>
+    </tr>
+  </thead>
+  <tbody >
+    <tr>
+      <th scope="row">1</th>
+      <td>23</td>
+      <td>15</td>
+      <td>25</td>
+    </tr>
+    <tr class="table-secondary">
+      <th scope="row">2</th>
+      <td >25</td>
+      <td>10</td>
+      <td>30</td>
+    </tr>
+    <tr>
+      <th scope="row">3</th>
+      <td >25</td>
+      <td>20</td>
+      <td>40</td>
+    </tr>
+     <tr  class="table-secondary">
+      <th scope="row">4</th>
+      <td>10</td>
+      <td>20</td>
+      <td>25</td>
+    </tr>
+  </tbody>
+</table>
+
+
+<div class="text-center" style="padding-top: 80px">
+<a href="feedback.html" class="btn btn-success" role="button">NEXT</a>
+</div>
+</div>
+</div>
+</div>
+<!-- RIGHT SIDE ENDS-->
+
+
+
+
+<!-- bodu content start------------------->
+
+
+
+
+<!-- bodu content END------------------->
+
+
+
+<!-- Footer -->
+
+
+
+<footer >
+	
+<div class="container-fluid bg-primary text-white pt-3">
+	<div class="row">
+
+
+
+		<div class="col-sm-4">
+			
+			
+			<p class="text-start">2010 - 2013 Tata consultancy service limited</p>
+
+		</div>
+
+  <div class="col-sm-4">
+      <div class="text-center">
+      
+      <a href="exam.html" class="btn btn-info" role="button">prev</a>
+      
+       <a href="feedback.html" class="btn btn-info" role="button">next</a>
+
+                 
+ 
+
+    </div>
+  </div>
+
+
+
+
+<div class="col-sm-4">
+	
+
+<p class="text-end">TCS is a member of the tata group</p>
+</div>
+
+	</div>
+
+</div>
+
+
+
+
+</footer>
+
+
+
+</body>
+</html>
